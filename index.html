@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" author="Sohail Dawoodi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Memo App 📝 </title>
+</head>  
+<body>
+    <div class="wrapper">
+        <div class="add-box tooltip" onclick="openPopup()">
+            <div class="icon"><i class="uil uil-plus"></i></div>
+            <p>Add Note</p>
+            <span class="tooltiptext">Click to add a new note</span>
+        </div>
+    </div>
+
+    <div class="popup-box" id="popupBox">
+        <div class="popup">
+            <header>
+                <p>Add a new note</p>
+                <i class="uil uil-times" onclick="closePopup()"></i>
+            </header>
+            <form onsubmit="addNote(event)">
+                <div class="row">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="row">
+                    <label for="description">Description</label>
+                    <textarea id="description" rows="4" required></textarea>
+                </div>
+                <button type="submit">Add Note</button>
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
