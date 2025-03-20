@@ -1,11 +1,11 @@
 :root {
-  --primaryColor: #6a11cb;
-  --secondaryColor: #2575fc;
+  --primaryColor: #b2ba09;
+  --secondaryColor: #b9f19d;
   --backgroundGradient: linear-gradient(135deg, var(--primaryColor), var(--secondaryColor));
-  --textColor: #fff;
+  --textColor: #ffffff;
   --cardBackground: rgba(255, 255, 255, 0.1);
   --cardHoverBackground: rgba(255, 255, 255, 0.2);
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow: 0 4px 6px rgba(107, 60, 162, 0.1);
 }
 
 * {
@@ -42,10 +42,10 @@ body {
 
 .add-box:hover,
 .note:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px) scale(1.02);
   background: var(--cardHoverBackground);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 .add-box {
   display: flex;
   align-items: center;
@@ -74,11 +74,12 @@ body {
 .note p {
   font-size: 24px;
   font-weight: 500;
+  color: #b91c1c;
 }
 
 .note span {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  color:#161515;
   margin-top: 10px;
 }
 .note .settings{
@@ -87,16 +88,22 @@ body {
   align-items: center;
   margin-top: 10px;
 }
-.note .settings i {
+.note .settings i.uil-trash {
   font-size: 24px;
   cursor: pointer;
+  color: #dc3545;
 }
-.note .settings i:hover {
-  color: var(--primaryColor);
+.note .settings i.uil-edit {
+  font-size: 24px;
+  cursor: pointer;
+  color: #007bff;
 }
+/* .note .settings i:hover {
+  
+} */
 .note .settings span {
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.7);
+  color:#5e5b5b;
 }
 .popup-box {
   position: fixed;
@@ -179,7 +186,7 @@ body {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: rgba(35, 34, 34, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   text-align: center;
   border-radius: 5px;
